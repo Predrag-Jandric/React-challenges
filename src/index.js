@@ -1,22 +1,17 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom"
-import ErrorPage from './components/ErrorPage';
-import Panel from './components/Panel';
-import Ch1 from './components/Ch1';
-
-
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import ErrorPage from "./components/ErrorPage";
+import Panel from "./components/Panel";
+import Ch1 from "./components/Challenges/Ch1";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
-    errorElement: <ErrorPage/>,
+    errorElement: <ErrorPage />,
   },
   {
     path: "panel",
@@ -26,12 +21,11 @@ const router = createBrowserRouter([
     path: "Ch1",
     element: <Ch1 />,
   },
-])
+]);
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router}/>
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
-

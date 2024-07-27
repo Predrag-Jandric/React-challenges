@@ -1,9 +1,9 @@
 import Welcome from "./components/Welcome";
-import Ch1 from "./components/Ch1";
+import Ch1 from "./components/Challenges/Ch1";
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <Welcome />
       {/* <Ch1 /> */}
     </div>

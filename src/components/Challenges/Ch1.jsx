@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { nightOwl } from "react-syntax-highlighter/dist/esm/styles/prism";
-import ch1gif from "../assets/ch1-completed.gif";
+import ch1gif from "../../assets/ch1-completed.gif";
 
 export default function Ch1() {
   const [text, setText] = useState("");

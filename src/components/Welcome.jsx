@@ -4,17 +4,19 @@ import devPhoto from "../assets/devPhoto.jpeg";
 
 function Welcome() {
   return (
-    <div>
-      <h1>Welcome to React challenges</h1>
-      <div>
-        <img src={devPhoto} alt="missing" />
+    <main className="flex flex-col items-center">
+      <div className="max-w-[50rem]">
+      <h1 className="text-bermuda text-center text-3xl font-bold underline">Welcome to React challenges</h1>
+      <div className="my-16 flex items-center justify-center gap-8 ">
+        <img className="rounded-full" src={devPhoto} alt="missing" />
         <p>
           Hi, I'm Predrag, great to see you. Are you ready to level up your
           React skills ? Dive into my interactive and completely free challenges
           and put your knowledge to the test while having fun at the same time.
         </p>
       </div>
-      <h2>Before we start...</h2>
+      
+      <h2 className="text-3xl">Before we start...</h2>
       <p>
         To get the most out of these challenges, it's helpful to have a basic
         understanding of JSX, components, state, and props. But don't worry if
@@ -30,7 +32,8 @@ function Welcome() {
       <Link className="btn" to="panel">
         Let's go !
       </Link>
-    </div>
+      </div>
+    </main>
   );
 }
 
