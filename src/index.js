@@ -8,7 +8,8 @@ import {
 } from "react-router-dom"
 import ErrorPage from './components/ErrorPage';
 import Panel from './components/Panel';
-import Challenge1 from './components/Challenges/Challenge1';
+import Ch1 from './components/Ch1';
+
 
 
 const router = createBrowserRouter([
@@ -22,9 +23,9 @@ const router = createBrowserRouter([
     element: <Panel />,
   },
   {
-    path: "challenge1",
-    element: <Challenge1 />,
-  }
+    path: "Ch1",
+    element: <Ch1 />,
+  },
 ])
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

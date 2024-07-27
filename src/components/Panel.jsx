@@ -1,12 +1,12 @@
 import React from "react";
 import { allChallengesData } from "../allChallengesData";
-import Challenge from "./Challenge";
+import Item from "./Item";
 
 function Panel() {
   return (
     <div>
       {allChallengesData.map((challenge) => (
-        <Challenge
+        <Item
           key={challenge.id}
           img={challenge.img}
           name={challenge.name}

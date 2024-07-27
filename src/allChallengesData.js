@@ -4,7 +4,7 @@ export const allChallengesData = [
     name: "name",
     desc: "desc",
     label: "easy",
-    link: "challenge1",
+    link: "../Ch1",
     id: 1,
   },
   {
@@ -12,7 +12,7 @@ export const allChallengesData = [
     name: "name",
     desc: "desc",
     label: "easy",
-    link: "challenge2",
+    link: "",
     id: 2,
   },
 ];

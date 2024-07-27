@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-function Challenge({ img, name, desc, label, link }) {
+function Item({ img, name, desc, label, link }) {
   return (
-    <div className="challenge">
+    <div className="item">
       <img src={img} alt="" />
       <h3>{name}</h3>
       <span>{label}</span>
@@ -13,4 +13,4 @@ function Challenge({ img, name, desc, label, link }) {
   );
 }
 
-export default Challenge;
+export default Item;
