@@ -6,6 +6,8 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ErrorPage from "./components/ErrorPage";
 import Panel from "./components/Panel";
 import Ch1 from "./components/Challenges/Ch1";
+import Ch2 from "./components/Challenges/Ch2";
+
 
 const router = createBrowserRouter([
   {
@@ -20,6 +22,10 @@ const router = createBrowserRouter([
   {
     path: "Ch1",
     element: <Ch1 />,
+  },
+  {
+    path: "Ch2",
+    element: <Ch2 />,
   },
 ]);
 

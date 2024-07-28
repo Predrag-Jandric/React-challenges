@@ -1,13 +1,13 @@
 import { useState } from "react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { nightOwl } from "react-syntax-highlighter/dist/esm/styles/prism";
-import ch1gif from "../../assets/ch1-completed.gif";
+import ch2gif from "../../assets/ch2-completed.gif";
 import { FaArrowRight } from "react-icons/fa6";
 import { FaArrowDown } from "react-icons/fa";
 import { FaArrowLeft } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
-export default function Ch1() {
+export default function Ch2() {
   const [showSolution, setShowSolution] = useState(false);
 
   function handleshowSolution() {
@@ -16,44 +16,39 @@ export default function Ch1() {
 
   const starterCode = `import { useState } from "react";
 
-export default function Ch1() {
-
-return (
+export default function Ch2() {
+  
+  return (
     <div>
-      <button>
-        Click
-      </button>
-      <p>text</p>
+      <button >Toggle</button>
+      <p></p>
     </div>
-  )
+  );
 }
 `;
 
   const solutionCode = `import { useState } from "react";
 
-export default function Ch1() {
-const [text, setText] = useState("");
+export default function Ch2() {
+  const [toggle, setToggle] = useState(true);
 
-function handleClick() {
-  setText("Hello World");
-}
+  function handleToggle() {
+    setToggle((prev) => !prev);
+  }
 
-return (
+  return (
     <div>
-      <button onClick={handleClick}>
-        Click
-      </button>
-      <p>{text}</p>
+      <button onClick={handleToggle}>Toggle</button>
+      <p>{toggle ? "I'm true" : "I'm false"}</p>
     </div>
-  )
-}
-`;
+  );
+}`;
 
-  const ch1Hints = [
-    "1. The text that is to be displayed after the button is clicked, needs to be stored in a state. So, create a state of 'text' and set it to empty string.",
-    "2. The paragraph is going to display this 'text' state so set the content of the paragraph to 'text' state.",
-    "3. Create a function 'handleClick' that will use the 'text' setter function to change the 'text' state.",
-    "4. Create an 'onClick' event on the button and add the 'handleClick' function to the button's 'onClick' event brackets.",
+  const ch2Hints = [
+    "1. We will need to store somewhere information about whether toggle is on or off. Create a state called 'toggle' and set it's initial value to true.",
+    "2. We need a logic for the button, so create a function 'handleToggle' and using the setter function, take previous value as and argument then return whatever is negative from the previous value. Use '!' negation operator.",
+    "3. Add an 'onClick' event on the button which will run 'handleToggle' when clicked.",
+    "4. In the paragraph, conditionally render content using ternary operator. If 'toggle' state is true set it to 'I'm true' and if not, to 'I'm false'.",
   ];
 
   const customStyle = {
@@ -63,32 +58,33 @@ return (
   const [currentHints, setCurrentHints] = useState([]);
 
   const handleRevealHint = () => {
-    if (currentHints.length < ch1Hints.length) {
-      setCurrentHints([...currentHints, ch1Hints[currentHints.length]]);
+    if (currentHints.length < ch2Hints.length) {
+      setCurrentHints([...currentHints, ch2Hints[currentHints.length]]);
     }
   };
 
   return (
     <section className="bg-bg relative text-white text-lg flex flex-col items-center text-center ">
       <p className="text-react py-8 mx-5 px-10 text-5xl font-bold">
-        01: Basic click event
+        02: Toggle button
       </p>
       <Link
         className="absolute left-6 top-7 rounded-full font-bold flex items-center justify-center h-12 w-12 bg-react text-btn-color hover:bg-react-hover transition"
         to="../panel"
       >
+        {" "}
         <FaArrowLeft className="rounded-full" />
       </Link>
       <article className="max-[650px]:flex-col m-6 py-8 max-w-[50rem] flex bg-bg2 p-6 gap-4 items-start rounded-xl">
         <p className="mt-3 text-xl text-start">
-          Implement the necessary logic that displays a piece of text.
-          Initially, the text should be empty. Upon clicking a button, the text
-          should change to "Hello World!". Use the provided React code as a
-          starting point. Completed task should behave like this{" "}
+          Implement the necessary logic for toggle button. Each time the button
+          is clicked, the content should switch between two different sentences.
+          Use the provided React code as a starting point. Completed task should
+          behave like this{" "}
           <FaArrowRight className="inline" />
         </p>
-
-        <img className="mx-auto pt-4" src={ch1gif} alt="gif here" />
+        <p></p>
+        <img className="mx-auto pt-4" src={ch2gif} alt="gif here" />
       </article>
       <article className="max-w-[50rem]">
         <p className="text-xl pb-2  m-6">

@@ -12,6 +12,10 @@ module.exports = {
       'react-hover': '#89D5E6',
       'btn-color': '#343A46',
       'transparent': 'transparent',
+      'shadow': '#474747',
+      'testbtn': '#0ad69c',
+      'testbtnhover': '#15f4b5',
+
 
     },
   },

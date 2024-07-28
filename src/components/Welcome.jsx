@@ -26,11 +26,11 @@ function Welcome() {
             challenges and put your knowledge to the test while having fun at
             the same time. I am well aware that my site is not perfect, I
             encountered many problems while building it, so I just made it how I
-            could.
+            could at the time.
           </p>
         </div>
 
-        <div className="text-center pb-8">
+        <div className="text-center pb-8 bg-bg2 rounded-xl p-6">
           <h2 className="text-4xl font-bold">Before we start...</h2>
           <p className="my-5">
             To get the most out of these challenges, it's helpful to have a
