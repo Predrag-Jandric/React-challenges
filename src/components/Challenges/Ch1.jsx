@@ -14,7 +14,7 @@ export default function Ch1() {
     setShowSolution(true);
   }
 
-  const starterCode = `import { useState } from "react";
+  const starterCode = `import React, { useState } from "react";
 
 export default function Ch1() {
 
@@ -29,7 +29,7 @@ return (
 }
 `;
 
-  const solutionCode = `import { useState } from "react";
+  const solutionCode = `import React, { useState } from "react";
 
 export default function Ch1() {
 const [text, setText] = useState("");
@@ -58,6 +58,7 @@ return (
 
   const customStyle = {
     margin: "25px",
+    marginBottom: "100px",
   };
 
   const [currentHints, setCurrentHints] = useState([]);
@@ -96,7 +97,6 @@ return (
           start building.
         </p>
         <SyntaxHighlighter
-          customStyle={customStyle}
           language="javascript"
           wrapLines
           style={nightOwl}

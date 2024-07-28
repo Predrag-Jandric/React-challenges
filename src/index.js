@@ -7,6 +7,8 @@ import ErrorPage from "./components/ErrorPage";
 import Panel from "./components/Panel";
 import Ch1 from "./components/Challenges/Ch1";
 import Ch2 from "./components/Challenges/Ch2";
+import Ch3 from "./components/Challenges/Ch3";
+
 
 
 const router = createBrowserRouter([
@@ -26,6 +28,10 @@ const router = createBrowserRouter([
   {
     path: "Ch2",
     element: <Ch2 />,
+  },
+  {
+    path: "Ch3",
+    element: <Ch3 />,
   },
 ]);
 
