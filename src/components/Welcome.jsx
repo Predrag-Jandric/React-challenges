@@ -24,7 +24,9 @@ function Welcome() {
             Hi, I'm Predrag, great to see you. Are you ready to level up your
             React skills ? Dive into my interactive and completely free
             challenges and put your knowledge to the test while having fun at
-            the same time. I am well aware that my site is not perfect, but this was a quick project to help junior devs like me.
+            the same time. I am well aware that my site is not perfect, I
+            encountered many problems while building it, so I just made it how I
+            could.
           </p>
         </div>
 
@@ -44,7 +46,7 @@ function Welcome() {
 
           <Link
             className="rounded-full font-bold px-5 py-4 bg-react text-btn-color hover:bg-react-hover transition"
-            to="panel" 
+            to="panel"
           >
             Let's go !
           </Link>

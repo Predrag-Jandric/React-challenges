@@ -2,6 +2,10 @@ import { useState } from "react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { nightOwl } from "react-syntax-highlighter/dist/esm/styles/prism";
 import ch1gif from "../../assets/ch1-completed.gif";
+import { FaArrowRight } from "react-icons/fa6";
+import { FaArrowDown } from "react-icons/fa";
+import { FaArrowLeft } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 export default function Ch1() {
   const [showSolution, setShowSolution] = useState(false);
@@ -16,11 +20,11 @@ import { useState } from "react";
 export default function Ch1() {
 
 return (
-    <div className="ch1-container">
-      <button class="btn">
+    <div>
+      <button>
         Click
       </button>
-      <p className="ch1-text">text</p>
+      <p>text</p>
     </div>
   )
 }
@@ -37,21 +41,26 @@ function handleClick() {
 }
 
 return (
-    <div className="ch1-container">
-      <button onClick={handleClick} class="btn">
+    <div>
+      <button onClick={handleClick}>
         Click
       </button>
-      <p className="ch1-text">{text}</p>
+      <p>{text}</p>
     </div>
   )
 }
 `;
 
   const ch1Hints = [
-    "1. The text that is to be displayed after the button is clicked, needs to be stored in a state. So, create a state of 'text' and set it to empty string",
-    "2. The paragraph is going to display this text so set the content of the paragraph to 'text' state",
-    "3. you won the challenge",
+    "1. The text that is to be displayed after the button is clicked, needs to be stored in a state. So, create a state of 'text' and set it to empty string.",
+    "2. The paragraph is going to display this 'text' state so set the content of the paragraph to 'text' state.",
+    "3. Create a function 'handleClick' that will use the 'text' setter function to change the 'text' state.",
+    "4. Create an 'onClick' event on the button and add the 'handleClick' function to the button's 'onClick' event brackets.",
   ];
+
+  const customStyle = {
+    margin: "25px",
+  };
 
   const [currentHints, setCurrentHints] = useState([]);
 
@@ -62,41 +71,63 @@ return (
   };
 
   return (
-    <section className="bg-bg text-white text-lg">
-      <article className="">
-        <p>
-          Build a React component that displays a piece of text. Initially, the
-          text should be empty. Upon clicking a button, the text should change
-          to "Hello World!"
+    <section className="bg-bg relative text-white text-lg flex flex-col items-center text-center ">
+      <p className="text-react pt-6 mx-5 px-10 text-4xl font-bold">
+        01: Basic click event
+      </p>
+      <Link className="absolute left-6 top-5 rounded-full font-bold flex items-center justify-center h-12 w-12 bg-react text-btn-color hover:bg-react-hover transition" to="../panel"><FaArrowLeft className="rounded-full"/></Link>
+      <article className="max-[650px]:flex-col m-6 py-8 max-w-[50rem] flex bg-bg2 p-6 gap-4 items-start rounded-xl">
+        <p className="mt-3 text-xl text-start">
+          Implement the necessary logic that displays a piece of text.
+          Initially, the text should be empty. Upon clicking a button, the text
+          should change to "Hello World!". Use the provided React code as a
+          starting point. Completed task should behave like this{" "}
+          <FaArrowRight className="inline" />
         </p>
-        <p>Challenge Requirements:</p>
-        <ul>
-          <li>Use the provided React code as a starting point.</li>
-          <li>
-            Implement the necessary logic to update the "text" state when the
-            button is clicked.
-          </li>
-        </ul>
-        <p>Completed task should behave like this</p>
-        <img src={ch1gif} alt="gif here" />
+        <p></p>
+        <img className="mx-auto pt-4" src={ch1gif} alt="gif here" />
       </article>
-      <article>
-        <p>
+      <article className="max-w-[50rem]">
+        <p className="text-xl pb-2  m-6">
           Copy and paste this <b>Started code</b> into your local editor and
           start building.
         </p>
-        <SyntaxHighlighter language="javascript" wrapLines style={nightOwl}>
+        <SyntaxHighlighter
+          customStyle={customStyle}
+          language="javascript"
+          wrapLines
+          style={nightOwl}
+        >
           {starterCode}
         </SyntaxHighlighter>
       </article>
 
-      <button onClick={handleRevealHint}>Reveal a hint</button>
-      <p style={{ whiteSpace: "pre-wrap" }}>{currentHints.join("\n")}</p>
+      <button
+        className="mt-6 rounded-full font-bold px-5 py-2 bg-react text-btn-color hover:bg-react-hover transition"
+        onClick={handleRevealHint}
+      >
+        Reveal a hint
+      </button>
+      <p
+        className="text-xl my-6 leading-8 p-6 rounded-xl text-start max-w-[50rem]"
+        style={{ whiteSpace: "pre-wrap" }}
+      >
+        {currentHints.join("\n")}
+      </p>
 
-      <p>I still cannot do it, show me the solution</p>
-      <button onClick={handleshowSolution}>Show solution</button>
+      <button
+        className="mb-8 rounded-full font-bold px-5 py-2 bg-react text-btn-color hover:bg-react-hover transition"
+        onClick={handleshowSolution}
+      >
+        Show solution <FaArrowDown className="inline" />
+      </button>
       {showSolution && (
-        <SyntaxHighlighter language="javascript" wrapLines style={nightOwl}>
+        <SyntaxHighlighter
+          customStyle={customStyle}
+          language="javascript"
+          wrapLines
+          style={nightOwl}
+        >
           {solutionCode}
         </SyntaxHighlighter>
       )}

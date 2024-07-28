@@ -6,8 +6,8 @@ export const allChallengesData = [
     id: 1,
   },
   {
-    name: "name",
-    desc: "desc",
+    name: "02: Toggle button",
+    desc: "Similar to first challenge, but this time, your task is to create a toggle button",
     link: "",
     id: 2,
   },
