@@ -9,7 +9,10 @@ module.exports = {
       'bg': '#23272F',
       'bg2': '#1B1E25',
       'react': '#58C4DC',
-      'btn-color': '#404756',
+      'react-hover': '#89D5E6',
+      'btn-color': '#343A46',
+      'transparent': 'transparent',
+
     },
   },
   plugins: [],

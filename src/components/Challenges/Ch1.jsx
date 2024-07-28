@@ -4,15 +4,10 @@ import { nightOwl } from "react-syntax-highlighter/dist/esm/styles/prism";
 import ch1gif from "../../assets/ch1-completed.gif";
 
 export default function Ch1() {
-  const [text, setText] = useState("");
   const [showSolution, setShowSolution] = useState(false);
 
   function handleshowSolution() {
     setShowSolution(true);
-  }
-
-  function handleClick() {
-    setText("Hello World!");
   }
 
   const starterCode = `
@@ -67,8 +62,8 @@ return (
   };
 
   return (
-    <>
-      <div>
+    <section className="bg-bg text-white text-lg">
+      <article className="">
         <p>
           Build a React component that displays a piece of text. Initially, the
           text should be empty. Upon clicking a button, the text should change
@@ -84,14 +79,8 @@ return (
         </ul>
         <p>Completed task should behave like this</p>
         <img src={ch1gif} alt="gif here" />
-      </div>
-      {/* <div className="ch1-container">
-        <button onClick={handleClick} class="btn">
-          Click
-        </button>
-        <p className="ch1-text">{text}</p>
-      </div> */}
-      <div>
+      </article>
+      <article>
         <p>
           Copy and paste this <b>Started code</b> into your local editor and
           start building.
@@ -99,7 +88,7 @@ return (
         <SyntaxHighlighter language="javascript" wrapLines style={nightOwl}>
           {starterCode}
         </SyntaxHighlighter>
-      </div>
+      </article>
 
       <button onClick={handleRevealHint}>Reveal a hint</button>
       <p style={{ whiteSpace: "pre-wrap" }}>{currentHints.join("\n")}</p>
@@ -111,6 +100,6 @@ return (
           {solutionCode}
         </SyntaxHighlighter>
       )}
-    </>
+    </section>
   );
 }

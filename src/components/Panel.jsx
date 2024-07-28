@@ -4,18 +4,18 @@ import Item from "./Item";
 
 function Panel() {
   return (
-    <div>
-      {allChallengesData.map((challenge) => (
-        <Item
-          key={challenge.id}
-          img={challenge.img}
-          name={challenge.name}
-          desc={challenge.desc}
-          label={challenge.label}
-          link={challenge.link}
-        />
-      ))}
-      <p>Panel</p>
+    <div className="bg-bg px-16">
+      <p className="text-white text-center text-5xl py-8">Select your first challenge</p>
+      <div className=" flex gap-10">
+        {allChallengesData.map((item) => (
+          <Item
+            key={item.id}
+            name={item.name}
+            desc={item.desc}
+            link={item.link}
+          />
+        ))}
+      </div>
     </div>
   );
 }

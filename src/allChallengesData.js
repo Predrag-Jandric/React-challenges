@@ -1,17 +1,13 @@
 export const allChallengesData = [
   {
-    img: "img",
-    name: "name",
-    desc: "desc",
-    label: "easy",
+    name: "01: Basic click event",
+    desc: "Make use of 'useState' and 'onClick' event to display a simple text when the button is clicked",
     link: "../Ch1",
     id: 1,
   },
   {
-    img: "img",
     name: "name",
     desc: "desc",
-    label: "easy",
     link: "",
     id: 2,
   },

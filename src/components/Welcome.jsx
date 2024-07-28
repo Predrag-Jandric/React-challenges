@@ -5,16 +5,16 @@ import reactLogo from "../assets/reactLogo.png";
 
 function Welcome() {
   return (
-    <main className="flex flex-col items-center bg-bg text-white text-xl">
+    <main className=" flex flex-col items-center bg-bg text-white text-xl">
       <div className="max-w-[50rem] m-6 ">
-        <div className="flex flex-col items-center mt-6">
+        <div className="flex flex-col items-center mt-2">
           <img className="w-28 mb-6" src={reactLogo} alt="missing" />
           <h1 className="text-center text-5xl font-bold">
             Welcome to React challenges
           </h1>
         </div>
 
-        <div className="max-[650px]:flex-col max-[650px]:text-center my-16 flex items-center justify-center gap-8 ">
+        <div className="max-[650px]:flex-col max-[650px]:text-center my-14 flex items-center justify-center gap-8 ">
           <img
             className="w-[200px] rounded-full"
             src={devPhoto}
@@ -28,7 +28,7 @@ function Welcome() {
           </p>
         </div>
 
-        <div className="text-center mb-8">
+        <div className="text-center pb-8">
           <h2 className="text-4xl font-bold">Before we start...</h2>
           <p className="my-5">
             To get the most out of these challenges, it's helpful to have a
@@ -43,8 +43,8 @@ function Welcome() {
           </p>
 
           <Link
-            className="rounded-full font-bold px-6 py-3 bg-react text-btn-color"
-            to="panel"
+            className="rounded-full font-bold px-5 py-4 bg-react text-btn-color hover:bg-react-hover transition"
+            to="panel" 
           >
             Let's go !
           </Link>
