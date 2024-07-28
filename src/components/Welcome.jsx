@@ -34,7 +34,7 @@ function Welcome() {
           <h2 className="text-4xl font-bold">Before we start...</h2>
           <p className="my-5">
             To get the most out of these challenges, it's helpful to have a
-            basic understanding of JSX, components, state, and props. But don't
+            basic React understanding, as well as JSX, components, state, and props. But don't
             worry if you're new to these concepts! You'll receive step-by-step
             explanations as you work through the challenges.
           </p>

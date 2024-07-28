@@ -87,10 +87,11 @@ export default function Ch3() {
         <FaArrowLeft className="rounded-full" />
       </Link>
       <article className="max-[650px]:flex-col m-6 py-8 max-w-[50rem] flex bg-bg2 p-6 gap-4 items-start rounded-xl">
-        <p className="mt-3 text-xl text-start">
+        <p className="mt-3 text-xl text-start leading-8">
           Build a basic counter application that displays a numerical value and
           allows the user to increase or decrease it, but only in the positive
-          number range. <FaArrowRight className="inline" />
+          number range. Completed task should behave like this{" "}
+          <FaArrowRight className="inline" />
         </p>
 
         <img className="mx-auto pt-4" src={ch3gif} alt="gif here" />

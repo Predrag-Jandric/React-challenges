@@ -77,7 +77,7 @@ export default function Ch2() {
         <FaArrowLeft className="rounded-full" />
       </Link>
       <article className="max-[650px]:flex-col m-6 py-8 max-w-[50rem] flex bg-bg2 p-6 gap-4 items-start rounded-xl">
-        <p className="mt-3 text-xl text-start">
+        <p className="mt-3 text-xl text-start leading-8">
           Implement the necessary logic for toggle button. Each time the button
           is clicked, the content should switch between two different sentences.
           Use the provided React code as a starting point. Completed task should

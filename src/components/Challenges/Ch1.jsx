@@ -81,7 +81,7 @@ return (
         <FaArrowLeft className="rounded-full" />
       </Link>
       <article className="max-[650px]:flex-col m-6 py-8 max-w-[50rem] flex bg-bg2 p-6 gap-4 items-start rounded-xl">
-        <p className="mt-3 text-xl text-start">
+        <p className="mt-3 text-xl text-start leading-8">
           Implement the necessary logic that displays a piece of text.
           Initially, the text should be empty. Upon clicking a button, the text
           should change to "Hello World!". Use the provided React code as a
@@ -96,11 +96,7 @@ return (
           Copy and paste this <b>Started code</b> into your local editor and
           start building.
         </p>
-        <SyntaxHighlighter
-          language="javascript"
-          wrapLines
-          style={nightOwl}
-        >
+        <SyntaxHighlighter language="javascript" wrapLines style={nightOwl}>
           {starterCode}
         </SyntaxHighlighter>
       </article>
