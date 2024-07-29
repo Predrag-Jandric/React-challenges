@@ -6,6 +6,7 @@ import { FaArrowRight } from "react-icons/fa6";
 import { FaArrowDown } from "react-icons/fa";
 import { FaArrowLeft } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import Footer from "../Footer";
 
 export default function Ch2() {
   const [showSolution, setShowSolution] = useState(false);
@@ -53,7 +54,7 @@ export default function Ch2() {
 
   const customStyle = {
     margin: "25px",
-    marginBottom: "100px",
+    marginBottom: "60px",
   };
 
   const [currentHints, setCurrentHints] = useState([]);
@@ -125,6 +126,7 @@ export default function Ch2() {
           {solutionCode}
         </SyntaxHighlighter>
       )}
+      <Footer />
     </section>
   );
 }

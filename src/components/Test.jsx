@@ -1,11 +1,10 @@
 import React from 'react'
 
-function Test() {
+export default function Footer() {
   return (
-    <div>
-      
-    </div>
+    <footer className='bg-bg2 text-white text-xl mt-4 py-8 text-center'>
+     <p>Please give this repo a ⭐ on <a className='underline text-react' href="https://github.com/Predrag-Jandric/React-challenges">Github</a></p> 
+    </footer>
   )
 }
 
-export default Test
