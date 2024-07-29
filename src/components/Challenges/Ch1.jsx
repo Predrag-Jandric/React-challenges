@@ -16,7 +16,7 @@ export default function Ch1() {
 
   const starterCode = `import React, { useState } from "react";
 
-export default function Ch1() {
+function Ch1() {
 
 return (
     <div>
@@ -31,7 +31,7 @@ return (
 
   const solutionCode = `import React, { useState } from "react";
 
-export default function Ch1() {
+function Ch1() {
 const [text, setText] = useState("");
 
 function handleClick() {

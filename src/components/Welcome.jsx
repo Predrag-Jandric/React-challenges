@@ -30,18 +30,19 @@ function Welcome() {
           </p>
         </div>
 
-        <div className="text-center pb-8 bg-bg2 rounded-xl p-6">
+        <div className="text-center pb-8 mb-8 bg-bg2 rounded-xl p-6">
           <h2 className="text-4xl font-bold">Before we start...</h2>
           <p className="my-5">
             To get the most out of these challenges, it's helpful to have a
-            basic React understanding, as well as JSX, components, state, and props. But don't
-            worry if you're new to these concepts! You'll receive step-by-step
-            explanations as you work through the challenges.
+            basic React understanding, as well as JSX, components, state, and
+            props. But don't worry if you're new to these concepts! You'll
+            receive step-by-step explanations as you work through the
+            challenges.
           </p>
           <p className="mb-10">
             For each project, we'll start with a fresh, blank React project.
-            Copy and paste my starter code and start building your solution in
-            your local development environment.
+            Simply copy and paste my starter code and start building your
+            solution in your local development environment.
           </p>
 
           <Link

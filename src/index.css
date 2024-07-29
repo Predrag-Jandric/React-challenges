@@ -14,21 +14,14 @@ html {
   background-color: #23272F;
 }
 
-
-.ch1-container {
-  border: solid 1px red;
-  width: 150px;
-  margin: 6rem;
-  padding: 1.7rem;
-  text-align: center;
-  height: 130px;
-  border: 2px solid #ccc;
+.user {
+  background-color: white;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid gray;
   border-radius: 5px;
-  background-color: #f0f0f0;
-  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-}
-
-.ch1-text {
-  margin-top: 1.3rem;
-  font-size: 1.5rem;
+  margin: 15px;
+  width: 14rem;
+  font-weight: bold;
 }

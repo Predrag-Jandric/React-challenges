@@ -16,7 +16,7 @@ export default function Ch2() {
 
   const starterCode = `import React, { useState } from "react";
 
-export default function Ch2() {
+  function Ch2() {
   
   return (
     <div>
@@ -29,7 +29,7 @@ export default function Ch2() {
 
   const solutionCode = `import React, { useState } from "react";
 
-export default function Ch2() {
+  function Ch2() {
   const [toggle, setToggle] = useState(true);
 
   function handleToggle() {

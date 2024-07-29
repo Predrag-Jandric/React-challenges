@@ -1,12 +1,11 @@
-import React, { useState } from "react";
+import React from 'react'
 
-export default function Ch3() {
-    
+function Test() {
   return (
     <div>
-      <button>-</button>
-      <p>Count: </p>
-      <button>+</button>
+      
     </div>
-  );
+  )
 }
+
+export default Test

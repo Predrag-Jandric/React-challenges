@@ -15,6 +15,12 @@ export const allChallengesData = [
     name: "03: Number counter",
     desc: "Test a different angle of your 'useState' understanding that builds up on Toggle button challenge.",
     link: "../Ch3",
-    id: 2,
+    id: 3,
+  },
+  {
+    name: "04: Map method",
+    desc: "Make use of 'map()' method and props to render the content dynamically in a new component.",
+    link: "../Ch4",
+    id: 4,
   },
 ];
