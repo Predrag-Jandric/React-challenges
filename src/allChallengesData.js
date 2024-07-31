@@ -23,4 +23,28 @@ export const allChallengesData = [
     link: "../Ch4",
     id: 4,
   },
+  {
+    name: "05: xxx",
+    desc: "yyy",
+    link: "./.",
+    id: 5,
+  },
+  {
+    name: "06: xxx",
+    desc: "yyy",
+    link: "./.",
+    id: 6,
+  },
+  {
+    name: "07: xxx",
+    desc: "yyy",
+    link: "./.",
+    id: 7,
+  },
+  {
+    name: "08: Complex form",
+    desc: "Final and hardest challenge, you need to code succesful form submission with different types of values.",
+    link: "../Ch8",
+    id: 8,
+  },
 ];

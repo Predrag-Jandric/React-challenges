@@ -1,14 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 function Test() {
   const [formData, setFormData] = useState({
-    name: '',
-    message: '',
-    age: '',
-    favoriteColor: ''
+    name: "",
+    message: "",
+    age: "",
+    favoriteColor: "",
   });
   const [submittedData, setSubmittedData] = useState(null);
-  const [error, setError] = useState('');
+  const [error, setError] = useState("");
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -22,26 +22,20 @@ function Test() {
     e.preventDefault();
     const { name, message, age, favoriteColor } = formData;
 
-    const ageNum = Number(age)
-
+    const ageNum = Number(age);
 
     if (!name || !message || !ageNum || !favoriteColor) {
-      setError('All fields are required.');
+      setError("All fields are required.");
       return;
     }
 
-    if ((ageNum === !Number && ageNum > 1)) {
-      setError('Age must be a number above 1.');
-      return;
-    }
-
-    setError('');
+    setError("");
     setSubmittedData(formData);
   };
 
   return (
-    <div className="App">
-      <form onSubmit={handleSubmit}>
+    <section className="form-container">
+      <form onSubmit={handleSubmit} className="form">
         <div>
           <label>
             Name:
@@ -70,6 +64,7 @@ function Test() {
               type="number"
               name="age"
               min={1}
+              max={90}
               value={formData.age}
               onChange={handleChange}
             />
@@ -91,11 +86,13 @@ function Test() {
             </select>
           </label>
         </div>
-        <button type="submit">Submit</button>
+        <button className="submit-btn" type="submit">
+          Submit
+        </button>
       </form>
-      {error && <p style={{ color: 'red' }}>{error}</p>}
+      {error && <p style={{ color: "red" }}>{error}</p>}
       {submittedData && (
-        <div>
+        <div className="submitted">
           <h3>Submitted Information:</h3>
           <p>Name: {submittedData.name}</p>
           <p>Message: {submittedData.message}</p>
@@ -103,7 +100,7 @@ function Test() {
           <p>Favorite Color: {submittedData.favoriteColor}</p>
         </div>
       )}
-    </div>
+    </section>
   );
 }
 
