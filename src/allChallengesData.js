@@ -43,7 +43,7 @@ export const allChallengesData = [
   },
   {
     name: "08: Complex form",
-    desc: "Final and hardest challenge, you need to code succesful form submission with different types of values.",
+    desc: "The final and hardest challenge. You need to code successful form submission with different types of values.",
     link: "../Ch8",
     id: 8,
   },

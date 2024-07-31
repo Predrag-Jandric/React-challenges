@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function Test() {
+export default function Test() {
   const [formData, setFormData] = useState({
     name: "",
     message: "",
@@ -34,8 +34,23 @@ function Test() {
   };
 
   return (
-    <section className="form-container">
-      <form onSubmit={handleSubmit} className="form">
+    <section
+      style={{ padding: "1rem", backgroundColor: "darkgreen", color: "black" }}
+    >
+      <form
+        onSubmit={handleSubmit}
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          gap: "1rem",
+          border: "1px solid black",
+          backgroundColor: "lightblue",
+          alignItems: "start",
+          fontSize: "1.2rem",
+          padding: "1rem",
+          width: "30rem",
+        }}
+      >
         <div>
           <label>
             Name:
@@ -86,13 +101,30 @@ function Test() {
             </select>
           </label>
         </div>
-        <button className="submit-btn" type="submit">
+        <button
+          style={{
+            backgroundColor: "orange",
+            padding: "5px 15px",
+            fontWeight: 700,
+          }}
+          type="submit"
+        >
           Submit
         </button>
       </form>
       {error && <p style={{ color: "red" }}>{error}</p>}
       {submittedData && (
-        <div className="submitted">
+        <div
+          style={{
+            marginTop: "2rem",
+            fontSize: "1.2rem",
+            borderRadius: "5px",
+            border: "2px solid black",
+            padding: "1rem",
+            backgroundColor: "khaki",
+            width: "30rem",
+          }}
+        >
           <h3>Submitted Information:</h3>
           <p>Name: {submittedData.name}</p>
           <p>Message: {submittedData.message}</p>
@@ -103,5 +135,3 @@ function Test() {
     </section>
   );
 }
-
-export default Test;

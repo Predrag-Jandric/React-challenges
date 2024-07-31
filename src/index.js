@@ -9,9 +9,10 @@ import Ch1 from "./components/Challenges/Ch1";
 import Ch2 from "./components/Challenges/Ch2";
 import Ch3 from "./components/Challenges/Ch3";
 import Ch4 from "./components/Challenges/Ch4";
-
-
-
+// import Ch5 from "./components/Challenges/Ch4";
+// import Ch6 from "./components/Challenges/Ch4";
+// import Ch7 from "./components/Challenges/Ch4";
+import Ch8 from "./components/Challenges/Ch8";
 
 const router = createBrowserRouter([
   {
@@ -39,14 +40,10 @@ const router = createBrowserRouter([
     path: "Ch4",
     element: <Ch4 />,
   },
-  // {
-  //   path: "Ch3",
-  //   element: <Ch5 />,
-  // },
-  // {
-  //   path: "Ch3",
-  //   element: <Ch6 />,
-  // },
+  {
+    path: "Ch8",
+    element: <Ch8 />,
+  },
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
