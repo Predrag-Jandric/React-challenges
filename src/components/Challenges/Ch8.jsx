@@ -237,12 +237,14 @@ export default function Ch8() {
 `;
 
   const ch8Hints = [
-    "1. Analyse the code carefully and think about ste steps needed to implement this logic. ",
-    "2. ",
-    "3. ",
-    "4. ",
-    "5. ",
-    "6. ",
+    "1. Analyze the code carefully and think about the steps needed to implement this logic.",
+    "2. Let's start small by adding the 'type' definition to all the inputs. Not all of them are text, and the one which is a number has a min and max definition.",
+    "3. Initialize the 'formData' state that will hold an object as a starting value of 'name', 'message', 'age', and 'favoriteColor'.",
+    "4. Initialise 'handleChange' function that will deal with all the changes when the user types into the fields.",
+    "5. Initialise 'submittedData' state that will hold the submitted form data.",
+    "6. Initialise 'error' state that will initially be set to an empty string and which will change to a sentence inside 'handleSubmit' function.",
+    "7. Initialise 'handleSubmit' function that will have guard rails such as, if any of the object properties are missing, an error will pop up requiring all fields to be filled.",
+    "8. In the end, 'setSubmittedData' should set new inputs as 'formData', like this 'setSubmittedData(formData)'.",
   ];
 
   const customStyle = {
@@ -274,16 +276,18 @@ export default function Ch8() {
           Welcome to the last challenge, you need to make a form with text
           input, textarea input, number input, 'select from options' input, and
           a submit button. When the submit button is clicked we need all the
-          submitted information to be displayed as shown in the gif. Form should
-          also have some guard rails so that all fields must be filled and the
-          'Age' field must be a number from 1 to 90 max. This is a very hard one
-          so it might be a good idea to reveal and follow the hints from the
-          start. This will be a learning journey. When you think you understand
-          everything and have seen and analyzed to solution, try the challenge
-          again without any help! <FaArrowDown className="inline" />
+          submitted information to be displayed in a new div, as shown in the
+          gif. Form should also have some guard rails so that all fields must be
+          filled and the 'Age' field must be a number from 1 to 90 max. This is
+          a very hard one so it might be a good idea to reveal the solution and
+          follow the hints from the start. This will be a learning journey and i
+          don't expect most people to code this from scratch. When you think you
+          understand everything and have seen and analyzed to solution, try the
+          challenge again and again, until you can code it without help.{" "}
+          <FaArrowDown className="inline" />
         </p>
 
-        <img className="mx-auto pt-4" src="" alt="gif here" />
+        <img className="mx-auto pt-4" src={ch8gif} alt="gif here" />
       </article>
       <article className="max-w-[50rem]">
         <p className="text-xl pb-2  m-6">
