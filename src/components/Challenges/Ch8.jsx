@@ -14,7 +14,88 @@ export default function Ch8() {
     setShowSolution(true);
   }
 
-  const starterCode = ``;
+  const starterCode = `
+import React, { useState } from "react";
+
+export default function Test() {
+  return (
+    <section
+      style={{ padding: "1rem", backgroundColor: "darkgreen", color: "black" }}
+    >
+      <form
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          gap: "1rem",
+          border: "1px solid black",
+          backgroundColor: "lightblue",
+          alignItems: "start",
+          fontSize: "1.2rem",
+          padding: "1rem",
+          width: "30rem",
+        }}
+      >
+        <div>
+          <label>
+            Name:
+            <input type="" name="name" />
+          </label>
+        </div>
+        <div>
+          <label>
+            Message:
+            <textarea name="message" />
+          </label>
+        </div>
+        <div>
+          <label>
+            Age:
+            <input type="" name="age" />
+          </label>
+        </div>
+        <div>
+          <label>
+            Favorite Color:
+            <select name="favoriteColor">
+              <option value="">Select a color</option>
+              <option value="red">Red</option>
+              <option value="green">Green</option>
+              <option value="blue">Blue</option>
+              <option value="yellow">Yellow</option>
+            </select>
+          </label>
+        </div>
+        <button
+          style={{
+            backgroundColor: "orange",
+            padding: "5px 15px",
+            fontWeight: 700,
+          }}
+          type="submit"
+        >
+          Submit
+        </button>
+      </form>
+      {/* create a div here that will display the submitted data */}
+    </section>
+  );
+}
+
+
+// CSS (not necessary, you can implement your own style)
+
+// label,
+// input,
+// textarea,
+// select {
+//   padding: 5px;
+//   margin-left: 15px;
+// }
+
+// button:hover {
+//   background-color: salmon;
+// }
+`;
 
   const solutionCode = `import React, { useState } from "react";
 
@@ -155,7 +236,14 @@ export default function Ch8() {
 }
 `;
 
-  const ch8Hints = ["1. ", "2. ", "3. ", "4. ", "5. ", "6. "];
+  const ch8Hints = [
+    "1. Analyse the code carefully and think about ste steps needed to implement this logic. ",
+    "2. ",
+    "3. ",
+    "4. ",
+    "5. ",
+    "6. ",
+  ];
 
   const customStyle = {
     margin: "25px",
@@ -183,7 +271,7 @@ export default function Ch8() {
       </Link>
       <article className="m-6 py-8 max-w-[50rem] flex-row bg-bg2 p-6 gap-6 items-start rounded-xl">
         <p className="mt-3 mb-6 text-xl text-start leading-8">
-          Welcome to the last challenge, You need to make a form with text
+          Welcome to the last challenge, you need to make a form with text
           input, textarea input, number input, 'select from options' input, and
           a submit button. When the submit button is clicked we need all the
           submitted information to be displayed as shown in the gif. Form should

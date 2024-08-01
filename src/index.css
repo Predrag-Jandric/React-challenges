@@ -28,14 +28,3 @@ html {
 
 /* ************************ */
 
-label,
-input,
-textarea,
-select {
-  padding: 5px;
-  margin-left: 15px;
-}
-
-button:hover {
-  background-color: salmon;
-}
