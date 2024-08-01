@@ -24,9 +24,9 @@ export const allChallengesData = [
     id: 4,
   },
   {
-    name: "05: xxx",
-    desc: "yyy",
-    link: "./.",
+    name: "05: Simple form",
+    desc: "This simple form challenge requires the basic understanding of controlled elements and.",
+    link: "../Ch5",
     id: 5,
   },
   {
