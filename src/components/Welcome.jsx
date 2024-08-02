@@ -1,20 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import devPhoto from "../assets/devPhoto.jpeg";
-import reactLogo from "../assets/reactLogo.png";
 
 function Welcome() {
   return (
     <main className=" flex flex-col items-center bg-bg text-white text-xl">
-      <div className="max-w-[50rem] m-6 ">
-        <div className="flex flex-col items-center mt-2">
-          <img className="w-28 mb-6" src={reactLogo} alt="missing" />
-          <h1 className="text-center text-5xl font-bold">
-            Welcome to React challenges
-          </h1>
-        </div>
+      <div className="max-w-[50rem] m-6 flex flex-col items-center">
+        <h1 className="text-center text-5xl font-bold">
+          Welcome to React challenges
+        </h1>
 
-        <div className="max-[650px]:flex-col max-[650px]:text-center my-14 flex items-center justify-center gap-8 ">
+        <div className="max-[650px]:flex-col max-[650px]:text-center my-12 flex items-center justify-center gap-8 ">
           <img
             className="w-[200px] rounded-full"
             src={devPhoto}
