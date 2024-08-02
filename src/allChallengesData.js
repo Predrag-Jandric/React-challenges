@@ -36,9 +36,9 @@ export const allChallengesData = [
     id: 6,
   },
   {
-    name: "07: xxx",
-    desc: "yyy",
-    link: "./.",
+    name: "07: Data fetching",
+    desc: "We need to fetch data with useEffect and display it using map method.",
+    link: "../Ch7",
     id: 7,
   },
   {
