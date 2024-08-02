@@ -2,7 +2,6 @@ import { useState } from "react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { nightOwl } from "react-syntax-highlighter/dist/esm/styles/prism";
 import ch6gif from "../../assets/ch6-completed.gif";
-import { FaArrowRight } from "react-icons/fa6";
 import { FaArrowDown } from "react-icons/fa";
 import { FaArrowLeft } from "react-icons/fa";
 import { Link } from "react-router-dom";
@@ -43,69 +42,77 @@ function Item() {
 `;
 
   const solutionCode = `
-import { useState } from "react";
+ import { useState } from "react"
 
-export default function Test() {
-  const [todos, setTodos] = useState([]);
-  const [inputVal, setInputVal] = useState("");
+ export default function Test() {
 
-  const handleInput = (e) => {
-    setInputVal(e.target.value);
-  };
+  const [todos, setTodos] = useState([])
+  const [inputVal, setInputVal] = useState("")
 
-  const addToDo = () => {
+  function handleInput(e){
+    setInputVal(e.target.value)
+  }
+
+  function addToDo(){
     if (inputVal !== "") {
-      setTodos((prevTodo) => [...prevTodo, inputVal]);
-      setInputVal("");
+      setTodos(prevTodo => [...prevTodo, inputVal])
+      setInputVal("")
     }
-  };
+  }
 
-  const handleDelete = (uniqueIndex) => {
-    setTodos((prev) =>
-      prev.filter((prevTodo, prevIndex) => prevIndex !== uniqueIndex)
-    );
-  };
+  function handleDelete(uniqueIndex){
+    setTodos((prev) => prev.filter((prevTodo, prevIndex) => prevIndex !== uniqueIndex));
+  }
 
   return (
-    <main>
+    <main >
       <h1>React To-do List</h1>
 
       <section>
-        <input
-          type="text"
-          value={inputVal}
-          placeholder="Enter task"
-          onChange={handleInput}
-        />
+        <input type="text" value={inputVal} placeholder="Enter task" onChange={handleInput} />
         <button onClick={addToDo}>Add</button>
       </section>
 
       <Item todos={todos} handleDelete={handleDelete} />
+
     </main>
   );
 }
 
-function Item({ todos, handleDelete }) {
+
+function Item({todos, handleDelete}) {
   return (
     <section>
-      {todos.map((item, index) => {
+
+    {todos.map((item, index) => {
         return (
           <article key={index}>
-            <p>{item}</p>
+            <p>{item}</p> 
 
-            <div>
+            <div >
               <input type="checkbox" />
               <button onClick={() => handleDelete(index)}>Delete</button>
             </div>
+
           </article>
-        );
+        )
       })}
+        
     </section>
-  );
+  )
 }
+
 `;
 
-  const ch6Hints = ["1. ", "2. ", "3. ", "4. ", "5. ", "6. "];
+  const ch6Hints = [
+    "1. Create a state called 'inputVal' which will hold an input value, initially an empty string. Then create a function that holds the event as an argument, that will set what whatever is typed into the input as an 'inputVal'.",
+    "2. Inside the input element tag, define value as 'inputVal' and an onChange event listener as a previously created function.",
+    "3. Create a state called 'todos' and set it as an empty array.",
+    "4. Render the 'Item' component inside the main component, between the 'main' and the 'section' element tag, and pass 'todos' state as props.",
+    "5. Inside the 'Item' component accept props and render the array state using map method. Might be a good idea to fill the array with dummy data just so that the map will return something visible on the screen.",
+    "6. Create a function that will copy the previous todos using spread operator and then set 'todos' as an 'inputVal'. All of this should happen only if 'inputVal' is not an empty string. We also want to reset 'inputVal' to an empty string at the end of the function.",
+    "7. Create a function that will handle deleting the item using filter method and don't forget to pass this function as a prop to 'Item' as well.",
+  ];
 
   const customStyle = {
     margin: "25px",
@@ -131,13 +138,16 @@ function Item({ todos, handleDelete }) {
       >
         <FaArrowLeft className="rounded-full" />
       </Link>
-      <article className="max-[650px]:flex-col m-6 py-8 max-w-[50rem] flex bg-bg2 p-6 gap-4 items-start rounded-xl">
+      <article className="flex-col m-6 py-8 max-w-[50rem] flex bg-bg2 p-6 gap-4 items-start rounded-xl">
         <p className="mt-3 text-xl text-start leading-8">
-          Implement the necessary logic that displays a piece of text.
-          Initially, the text should be empty. Upon clicking a button, the text
-          should change to "Hello World!". Use the provided React code as a
-          starting point. Completed task should behave like this{" "}
-          <FaArrowRight className="inline" />
+          Your task is to create an app where the user can type into the input
+          field and submit that data into a separate component which will render
+          each new input as a separate item. For this, simply use the 'map'
+          method and props to send data to the child 'Item' component. Apply
+          your styling which can be whatever, the goal is to practice React
+          logic. If this task was easy, as a bonus challenge, try adding a local
+          storage feature that will not delete previously added to-dos upon
+          refreshing the page <FaArrowDown className="inline" />
         </p>
 
         <img className="mx-auto pt-4" src={ch6gif} alt="gif here" />
