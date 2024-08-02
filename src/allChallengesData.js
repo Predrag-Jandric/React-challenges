@@ -30,9 +30,9 @@ export const allChallengesData = [
     id: 5,
   },
   {
-    name: "06: xxx",
-    desc: "yyy",
-    link: "./.",
+    name: "06: To-do list",
+    desc: "In this app, we will practice using: props, functions, useState, map method and integrating different components.",
+    link: "../Ch6",
     id: 6,
   },
   {
