@@ -2,7 +2,6 @@
 
 # 🔗 [Live Preview](https://react-challenges-predrag.netlify.app/)
 
-![Design preview](./public/project-preview1.png)
 ![Design preview](./public/project-preview2.png)
 ![Design preview](./public/project-preview3.png)
 
