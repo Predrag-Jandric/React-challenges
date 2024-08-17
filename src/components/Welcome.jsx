@@ -17,21 +17,17 @@ function Welcome() {
             alt="missing"
           />
           <p>
-            Hi, I'm Predrag, great to see you. Are you ready to level up your
-            React skills ? Dive into my interactive and completely free
-            challenges and put your knowledge to the test while having fun at
-            the same time. I am well aware that my site is not perfect, I
-            encountered many problems while building it, so I just made it how I
-            could at the time.
+            Hi, I'm Predrag, great to see you. Do you want to test your React
+            skills ? Put your knowledge to the test with my free and fun
+            challenges.
           </p>
         </div>
 
         <div className="text-center pb-8 mb-8 bg-bg2 rounded-xl p-6">
           <h2 className="text-4xl font-bold">Before we start...</h2>
           <p className="my-5">
-            To get the most out of these challenges, it's helpful to have a
-            basic React understanding, as well as JSX, components, state, and
-            props. But don't worry if you're new to these concepts! You'll
+            It is required to have a React understanding of JSX, components,
+            state, and props. But don't worry if you're not sure ! You'll
             receive step-by-step explanations as you work through the
             challenges.
           </p>
